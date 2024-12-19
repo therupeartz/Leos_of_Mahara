@@ -1,0 +1,110 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+.logo-bar {
+    margin: 20px auto;
+    width: 80%;
+    height: 80px; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-bar img {
+    width: 100%; /* Ensure the logo fits the width */
+    height: 100%; /* Ensure the logo fits the height */
+    object-fit: contain; /* Ensure the image retains its aspect ratio */
+}
+
+.lamps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.lamp {
+    position: relative;
+    width: 70px;
+    height: 140px;
+    background-color: #8B4513;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lamp:hover {
+    transform: scale(1.1);
+}
+
+.lamp-logo {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    background-image: url('https://marvel-b1-cdn.bc0a.com/f00000000210829/www.lionsclubs.org/sites/default/files/division/marketing/brand/logos/rgb_Leo_2C.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.flame {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.flame.lit {
+    background-color: orange;
+    box-shadow: 0 0 20px orange;
+}
+
+.lamp-name {
+    position: absolute;
+    bottom: -45px; /* Increased space between lamp and name */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#chief-guest-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px; /* Increased margin for better spacing */
+}
+
+#chief-guest-container .lamp {
+    width: 80px;
+    height: 150px;
+}
+
+#chief-guest-container .lamp-name {
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+}
